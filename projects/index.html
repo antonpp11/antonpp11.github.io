@@ -1,11 +1,29 @@
----
+----
 layout: default
 title: My projects
 ---
-	<h1>TEST</h1>
+	<h1>{{ page.title }}</h1>
 	<!-- <ul class="posts">
 
 	  {% for project in site.projects %}
 	    <li><span>{{ project.date | date_to_string }}</span> » <a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a></li>
 	  {% endfor %}
 	</ul> -->
+
+	<div class="row">
+	{% for project in projects %}
+	    <div class="col-md-4">
+	        <div class="card mb-2">
+	            <img class="card-img-top" src="https://unsplash.it/1080/720/?image=377">
+	            <div class="card-body">
+	                <h5 class="card-title">{{ project.title }}</h5>
+	                <p class="card-text">this is a description</p>
+	                <a href="{{ project.url }}"
+	                   class="btn btn-primary">
+	                    Read More
+	                </a>
+	            </div>
+	        </div>
+	    </div>
+	    {% endfor %}
+	</div>
