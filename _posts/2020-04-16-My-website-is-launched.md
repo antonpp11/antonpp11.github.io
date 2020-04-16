@@ -2,6 +2,7 @@
 ---
 layout: project_detail
 title: "I, antonpp11, finally launched my website"
+short_description: This is a description
 technology: HTML/CSS/JavaScript
 date: 2020-04-16
 ---
