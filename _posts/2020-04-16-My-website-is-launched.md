@@ -1,6 +1,6 @@
 
 ---
-layout: projects
+layout: default
 title: "I, antonpp11, finally launched my website"
 date: 2020-04-16
 ---
