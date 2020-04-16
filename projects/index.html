@@ -11,17 +11,14 @@ title: My projects
 	</ul> -->
 
 	<div class="row">
-	{% for project in projects %}
+	{% for project in site.projects %}
 	    <div class="col-md-4">
 	        <div class="card mb-2">
 	            <img class="card-img-top" src="https://unsplash.it/1080/720/?image=377">
 	            <div class="card-body">
 	                <h5 class="card-title">{{ project.title }}</h5>
 	                <p class="card-text">this is a description</p>
-	                <a href="{{ project.url }}"
-	                   class="btn btn-primary">
-	                    Read More
-	                </a>
+	                <a href="{{ project.url }}" class="btn btn-primary">Read More</a>
 	            </div>
 	        </div>
 	    </div>
