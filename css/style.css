@@ -100,7 +100,7 @@ main {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
   grid-gap: 40px;
-  /* padding: 20px 0; */
+  padding: 20px 0;
 }
 
 .text--medium {
@@ -199,8 +199,10 @@ main {
 }
 
 
+
+
 .footer {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
