@@ -115,7 +115,7 @@ main {
   grid-column: 2 / span 12;
   display: grid;
   grid-template-columns: repeat(12, minmax(auto, 60px));
-  grid-gap: 40px;
+  grid-gap: 20px;
 }
 
 .card {
@@ -198,25 +198,6 @@ main {
   }
 }
 
-
-
-/* .footer {
-  display: flex
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
-} */
-position: fixed;
-top: 0;
-z-index: 1;
-display: flex;
-width: 100%;
-height: 60px;
-background: rgba(0,0,0,0.7);
-}
 
 .footer {
   position: fixed;
