@@ -7,24 +7,26 @@ title: antonpp11
   <h1>Welcome To My Site</h1>
   <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
 </section>
-<section id="projects">
-    <h1> Featured Projects </h1>
-    <section class="cards">
-      {% for project in site.posts %}
-        <div class="card">
-          <div class="card__image-container">
-            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80" alt="Detailed image description would go here."/>
-          </div>
-          <div class="card__content">
-            <p class="card__title text--medium">{{ project.title }}</p>
-            <div class="card__info">
-              <p class="text--medium">{{ project.technology }}</p>
-              <a class="card__more text--medium" href="{{ project.url }}">More</a>
+<main>
+  <section id="projects">
+      <h1> Featured Projects </h1>
+      <section class="cards">
+        {% for project in site.posts %}
+          <div class="card">
+            <div class="card__image-container">
+              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80" alt="Detailed image description would go here."/>
+            </div>
+            <div class="card__content">
+              <p class="card__title text--medium">{{ project.title }}</p>
+              <div class="card__info">
+                <p class="text--medium">{{ project.technology }}</p>
+                <a class="card__more text--medium" href="{{ project.url }}">More</a>
+              </div>
             </div>
           </div>
-        </div>
-    </section>
-    {% endfor %}
+        {% endfor %}
+      </section>
+    </main>
     <div class="button_cont" align="center"><a class="button" href="/projects">View all my projects</a></div>
 </section>
 <section id="cv">
