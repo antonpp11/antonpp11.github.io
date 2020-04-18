@@ -8,9 +8,9 @@ layout: default
     </div>
     <div class="col-md-4">
         <h5>Date posted:</h5>
-        <p>{{ page.date }}</p>
+        <p>{{ page.date | date_to_string }}</p>
         <h5>About the project:</h5>
-        <p>{{ page.contents }}</p>
+        <p>{{ content }}</p>
         <br>
         <h5>Technology used:</h5>
         <p>{{ page.technology }}</p>
