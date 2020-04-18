@@ -100,7 +100,7 @@ main {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
   grid-gap: 40px;
-  padding: 20px 0;
+  /* padding: 20px 0; */
 }
 
 .text--medium {
@@ -208,10 +208,9 @@ main {
   left: 0;
   z-index: 1;
   width: 100%;
-  heigth: 60px;
+  heigth: 30px;
   padding: 1rem;
   display: flex
-  overflow: hidden;
   background-color: #333;
   background: rgba(0,0,0,0.7);
   text-align: center;
