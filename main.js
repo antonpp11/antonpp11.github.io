@@ -287,7 +287,7 @@
         })
     },
     "4FPD": function(t, e, n) {
-        t.exports = n.p + "assets/apple-icon-180x180.png"
+        t.exports = n.p + "assets/favicon_other_formats/apple-touch-icon.png"
     },
     "4hhi": function(t, e, n) {
         t.exports = n.p + "assets/images/profil.jpg"
@@ -4466,7 +4466,7 @@
             return e
         }
         var r = {
-            "./apple-icon-180x180.png": "4FPD",
+            "./favicon_other_formats/apple-touch-icon.png": "4FPD",
             "./images/profil.jpg": "4hhi",
             "./images/space.jpg": "wonT",
             "./images/work001-01.jpg": "bz8M",
