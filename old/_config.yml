@@ -1,6 +1,0 @@
-theme: jekyll-theme-minimal
-title: Welcome to @antonpp11's homepage!
-description: This website is built by me and will be displaying my projects, as well as my personal information.
-name: antonpp11
-markdown: kramdown
-permalink: /projects/:year/:month/:day/:title
