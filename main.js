@@ -446,7 +446,7 @@
             }
 
             function o() {
-                t('nav li a[href=".' + location.pathname + '"]').addClass("active"), "/" == location.pathname && t('nav li a[href="./index.html"]').addClass("active")
+                t('nav li a[href=".' + location.pathname + '"]').addClass("active"), "/" == location.pathname && t('nav li a[href="/index.html"]').addClass("active")
             }
 
             function r() {
