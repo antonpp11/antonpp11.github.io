@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_other_formats/apple-touch-icon.png">
+    <link href="/assets/favicon.ico" rel="icon">
+
+    <title>antonpp11</title>
+
+    <link href="https://antonpp11.github.io/main.css" rel="stylesheet">
+    <meta name="google-site-verification" content="z6-G3WN4ZXxJk1dY-F_9kU5jxtEi9yQny8PikAedTHQ" />
+    <style>
+        /* Style for the header component */
+        .navbar {
+            background-color: #2c3e50;
+            /* Set the background color of the header */
+            border: none;
+            /* Remove the border of the header */
+            border-radius: 0;
+            /* Remove the rounded corners of the header */
+        }
+
+        .navbar-nav li a {
+            color: #fff;
+            /* Set the color of the navigation links */
+            font-weight: 600;
+            /* Set the font weight of the navigation links */
+            text-transform: uppercase;
+            /* Set the text to uppercase */
+        }
+
+        .navbar-nav li a:hover {
+            color: #f1c40f;
+            /* Set the color of the navigation links on hover */
+        }
+
+        .blog-posts-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30px 50px;
+        }
+
+        .blog-post {
+            width: 30%;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-post h2 {
+            margin: 15px;
+            font-size: 20px;
+        }
+
+        .blog-post p {
+            margin: 0 15px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body class="minimal">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+
+    <header>
+        <nav class="navbar  navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav ">
+                        <li><a href="/index.html" title="">Home</a></li>
+                        <li><a href="/projects.html" title="">Projects</a></li>
+                        <li><a href="/about.html" title="">About me</a></li>
+                        <li><a href="/contact.html" title="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="blog-posts-container">
+        <div class="blog-post">
+            <img src="/assets/images/blog-post-1.jpg" alt="Blog post 1">
+            <h2>My First Blog Post</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sodales est. Proin vel consequat purus.
+                Maecenas tincidunt gravida faucibus. </p>
+            <p class="blog-date">Posted on March 17, 2023</p>
+        </div>
+
+        <div class="blog-post">
+            <img src="/assets/images/blog-post-2.jpg" alt="Blog post 2">
+            <h2>My Second Blog Post</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sodales est. Proin vel consequat purus.
+                Maecenas tincidunt gravida faucibus. </p>
+            <p class="blog-date">Posted on March 16, 2023</p>
+        </div>
+
+        <div class="blog-post">
+            <img src="/assets/images/blog-post-3.jpg" alt="Blog post 3">
+            <h2>My Third Blog Post</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sodales est. Proin vel consequat purus.
+                Maecenas tincidunt gravida faucibus. </p>
+            <p class="blog-date">Posted on March 15, 2023</p>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            type();
+            movingBackgroundImage();
+        });
+    </script>
+
+
+    <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>
+</body>
+
+</html>
