@@ -5129,6 +5129,7 @@ textarea {
 .nav > li > a.active,
 .nav > li > a:hover {
   font-weight: bold;
+  background-color: #000;
 }
 .nav.navbar-small > li > a {
   font-size: 11px;
