@@ -26,7 +26,7 @@
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
 
-  <header>
+  <!-- <header>
     <nav class="navbar  navbar-fixed-top navbar-inverse">
       <div class="container">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
@@ -40,15 +40,18 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav ">
             <li><a href="/index.html" title="">Home</a></li>
-            <li><a href="/projects.html" title="">Projects</a></li>
-            <!-- <li><a href="/blog.html" title="">Blog</a></li> -->
-            <li><a href="/about.html" title="">About me</a></li>
+            <li><a href="/projects.html" title="">Projects</a></li> -->
+  <!-- <li><a href="/blog.html" title="">Blog</a></li> -->
+  <!-- <li><a href="/about.html" title="">About me</a></li>
             <li><a href="/contact.html" title="">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-  </header>
+  </header> -->
+
+  <div id="navbar-container"></div>
+
   <div class="hero-full-container background-image-container white-text-container"
     style="background-image: url('/assets/images/abstractcomputer.jpg')">
     <div class="container">
@@ -76,6 +79,17 @@
   </div>
 
   <script>
+    // Include the navbar using JavaScript
+    var navbarContainer = document.getElementById("navbar-container");
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "navbar.html", true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        navbarContainer.innerHTML = xhr.responseText;
+      }
+    };
+    xhr.send();
+
     document.addEventListener("DOMContentLoaded", function (event) {
       type();
       movingBackgroundImage();
