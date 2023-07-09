@@ -25,7 +25,7 @@
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
 
-  <header>
+  <!-- <header>
     <nav class="navbar  navbar-fixed-top navbar-default">
       <div class="container">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
@@ -39,9 +39,9 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav ">
             <li><a href="/index.html" title="">Home</a></li>
-            <li><a href="/projects.html" title="">Projects</a></li>
-            <!-- <li><a href="/blog.html" title="">Blog</a></li> -->
-            <li><a href="/about.html" title="">About me</a></li>
+            <li><a href="/projects.html" title="">Projects</a></li> -->
+  <!-- <li><a href="/blog.html" title="">Blog</a></li> -->
+  <!-- <li><a href="/about.html" title="">About me</a></li>
             <li><a href="/contact.html" title="">Contact</a></li>
           </ul>
 
@@ -49,7 +49,9 @@
         </div>
       </div>
     </nav>
-  </header>
+  </header> -->
+
+  <div id="navbar-container"></div>
 
   <div class="section-container">
     <div class="container">
@@ -66,8 +68,10 @@
                 <h3>Who am I?</h3>
                 <p>I am a responsible and serious Computer Engineering graduate with advanced skills in data science
                   and and business analysis.
-                  My interests are in the broad scope of business development and analysis, software sales and account management. I believe
-                  in the pairing of great technical experience mixed with people and communication skills will lead me to my dream job.
+                  My interests are in the broad scope of business development and analysis, software sales and account
+                  management. I believe
+                  in the pairing of great technical experience mixed with people and communication skills will lead me
+                  to my dream job.
                   Outside of the technical aspect, I'm an avid fan of soccer and a player myself.
                   I've been involved in the sport all my life.</p>
                 <h3>Work experience</h3>
@@ -75,9 +79,12 @@
                   <li>
                     <h4>Account Manager - Melcarm, Ottawa, ON</h4>
                     <ul>
-                      <li>Build and maintain strong customer relationships by having constant conversations, keeping track using CRM tools</li>
-                      <li>Prepare and propose digital solutions by serving as a liaison between the engineering team and the customers</li>
-                      <li>Reach quarterly sales quota by acquiring new clients as well as extending current contracts</li>
+                      <li>Build and maintain strong customer relationships by having constant conversations, keeping
+                        track using CRM tools</li>
+                      <li>Prepare and propose digital solutions by serving as a liaison between the engineering team and
+                        the customers</li>
+                      <li>Reach quarterly sales quota by acquiring new clients as well as extending current contracts
+                      </li>
                     </ul>
                   </li>
                   <li>
@@ -240,6 +247,17 @@
   </footer>
 
   <script>
+    // Include the navbar using JavaScript
+    var navbarContainer = document.getElementById("navbar-container");
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "navbar.html", true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        navbarContainer.innerHTML = xhr.responseText;
+      }
+    };
+    xhr.send();
+
     document.addEventListener("DOMContentLoaded", function (event) {
       navActivePage();
     });
