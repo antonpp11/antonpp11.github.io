@@ -1,79 +1,94 @@
 {
     "projects": [
       {
-        "title": "Elevator Traffic Mgmt A",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project1.html"
+        "title": "Capstone Project",
+        "image": "/assets/images/capstone.jpg",
+        "link": "/projects/capstone.html"
       },
       {
-        "title": "Elevator Traffic Mgmt B",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project2.html"
+        "title": "World Cup Predictor",
+        "image": "/assets/images/worldcup.jpg",
+        "link": "/projects/worldcup.html"
       },
       {
-        "title": "Elevator Traffic Mgmt C",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project3.html"
+        "title": "Fixed Income Maths",
+        "image": "/assets/images/bondsmaths.jpg",
+        "link": "/projects/bondsmaths.html"
       },
       {
-        "title": "Project 4",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project1.html"
+        "title": "Stock Valuation",
+        "image": "/assets/images/stockvaluation.jpg",
+        "link": "/projects/stockvaluation.html"
       },
       {
-        "title": "Project 5",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project2.html"
+        "title": "Correlation Matrix",
+        "image": "/assets/images/correlationmatrix.gif",
+        "link": "/projects/correlationmatrix.html"
       },
       {
-        "title": "Project 6",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project3.html"
+        "title": "Markowitz Model",
+        "image": "/assets/images/markowitz.jpg",
+        "link": "/projects/markowitz.html"
       },
       {
-        "title": "Project 7",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project1.html"
+        "title": "Financial Accounting",
+        "image": "/assets/images/financialaccounting.jpg",
+        "link": "/projects/financialaccounting.html"
       },
       {
-        "title": "Project 8",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project2.html"
+        "title": "Ottleti App",
+        "image": "/assets/images/ottleti.jpg",
+        "link": "/projects/ottleti.html"
       },
       {
-        "title": "Project 9",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project3.html"
+        "title": "Stock Screening",
+        "image": "/assets/images/stockscreening.jpg",
+        "link": "/projects/stockscreening.html"
       },
       {
-        "title": "Project 10",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project1.html"
+        "title": "Sudoku Solver",
+        "image": "/assets/images/sudoku.jpg",
+        "link": "/projects/sudoku.html"
       },
       {
-        "title": "Project 11",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project2.html"
+        "title": "TicTacToe AI",
+        "image": "/assets/images/tictactoe.jpg",
+        "link": "/projects/tictactoe.html"
       },
       {
-        "title": "Project 12",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project3.html"
+        "title": "Scroll Changer",
+        "image": "/assets/images/scrollchanger.jpg",
+        "link": "/projects/scrollchanger.html"
       },
       {
-        "title": "Project 13",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project1.html"
+        "title": "Engineering Games",
+        "image": "/assets/images/enggames.jpg",
+        "link": "/projects/enggames.html"
       },
       {
-        "title": "Project 14",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project2.html"
+        "title": "Service Novigrad",
+        "image": "/assets/images/servicenovigrad.jpg",
+        "link": "/projects/servicenovigrad.html"
       },
       {
-        "title": "Project 15",
+        "title": "This Website",
+        "image": "/assets/images/thiswebsite.jpg",
+        "link": "/projects/thiswebsite.html"
+      },
+      {
+        "title": "PowerBI Training",
+        "image": "/assets/images/powerbi.jpg",
+        "link": "/projects/powerbi.html"
+      },
+      {
+        "title": "Arterial Pump",
+        "image": "/assets/images/pump.jpg",
+        "link": "/projects/pump.html"
+      },
+      {
+        "title": "Coming Soon",
         "image": "/assets/images/neurons.jpg",
-        "link": "/projects/project3.html"
+        "link": "/projects.html"
       }
     ]
   }
