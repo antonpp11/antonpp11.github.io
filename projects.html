@@ -110,7 +110,7 @@
         var carouselPageCounter = document.getElementById("carousel-page-counter");
         var carousel = document.getElementById("myCarousel");
 
-        carousel.addEventListener("slid.bs.carousel", function () {
+        carousel.addEventListener("slide.bs.carousel", function () {
           var activeIndex = Array.from(carousel.querySelectorAll(".item")).indexOf(
             carousel.querySelector(".item.active")
           );
