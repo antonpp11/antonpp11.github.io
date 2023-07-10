@@ -56,6 +56,7 @@
   </div>
 
   <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     var navbarContainer = document.getElementById("navbar-container");
     var xhrNavbar = new XMLHttpRequest();
@@ -69,7 +70,17 @@
 
     document.addEventListener("DOMContentLoaded", function (event) {
       navActivePage();
+      type();
     });
+
+    function type() {
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        backSpeed: 70,
+        loop: true
+      });
+    }
   </script>
 </body>
 
