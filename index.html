@@ -26,7 +26,7 @@
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
   <header>
-    <div id="navbar-container" style="color: red;"></div>
+    <div id="navbar-container" style="color: #fff;"></div>
   </header>
 
   <div class="hero-full-container background-image-container white-text-container"
@@ -57,20 +57,30 @@
 
   <script>
     var navbarContainer = document.getElementById("navbar-container");
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "navbar.html", true);
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        navbarContainer.innerHTML = xhr.responseText;
+    var xhrNavbar = new XMLHttpRequest();
+    xhrNavbar.open("GET", "navbar.html", true);
+    xhrNavbar.onreadystatechange = function () {
+      if (xhrNavbar.readyState === 4 && xhrNavbar.status === 200) {
+        navbarContainer.innerHTML = xhrNavbar.responseText;
       }
     };
-    xhr.send();
+    xhrNavbar.send();
+
+    var footerContainer = document.getElementById("footer-container");
+    var xhrFooter = new XMLHttpRequest();
+    xhrFooter.open("GET", "footer.html", true);
+    xhrFooter.onreadystatechange = function () {
+      if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
+        footerContainer.innerHTML = xhrFooter.responseText;
+      }
+    };
+    xhrFooter.send();
 
     document.addEventListener("DOMContentLoaded", function (event) {
-      type();
-      movingBackgroundImage();
+      navActivePage();
     });
   </script>
+  <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>
 
 
   <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>

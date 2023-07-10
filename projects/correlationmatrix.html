@@ -77,21 +77,34 @@
   </div>
 
 
-  <footer class="footer-container text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <p></p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
 
   <script>
+    var navbarContainer = document.getElementById("navbar-container");
+    var xhrNavbar = new XMLHttpRequest();
+    xhrNavbar.open("GET", "navbar.html", true);
+    xhrNavbar.onreadystatechange = function () {
+      if (xhrNavbar.readyState === 4 && xhrNavbar.status === 200) {
+        navbarContainer.innerHTML = xhrNavbar.responseText;
+      }
+    };
+    xhrNavbar.send();
+
+    var footerContainer = document.getElementById("footer-container");
+    var xhrFooter = new XMLHttpRequest();
+    xhrFooter.open("GET", "footer.html", true);
+    xhrFooter.onreadystatechange = function () {
+      if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
+        footerContainer.innerHTML = xhrFooter.responseText;
+      }
+    };
+    xhrFooter.send();
+
     document.addEventListener("DOMContentLoaded", function (event) {
       navActivePage();
     });
   </script>
+  <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>
   <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>
 </body>
 
