@@ -41,16 +41,17 @@
           <ul class="nav navbar-nav ">
             <li><a href="/index.html" title="">Home</a></li>
             <li><a href="/projects.html" title="">Projects</a></li> -->
-            <!-- <li><a href="/blog.html" title="">Blog</a></li> -->
-            <!-- <li><a href="/about.html" title="">About me</a></li>
+  <!-- <li><a href="/blog.html" title="">Blog</a></li> -->
+  <!-- <li><a href="/about.html" title="">About me</a></li>
             <li><a href="/contact.html" title="">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header> -->
-
-  <div id="navbar-container"></div>
+  <header>
+    <div id="navbar-container"></div>
+  </header>
 
   <div class="hero-full-container background-image-container white-text-container"
     style="background-image: url('/assets/images/abstractcomputer.jpg')">
@@ -83,13 +84,13 @@
     var navbarContainer = document.getElementById("navbar-container");
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "navbar.html", true);
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         navbarContainer.innerHTML = xhr.responseText;
       }
     };
     xhr.send();
-    
+
     document.addEventListener("DOMContentLoaded", function (event) {
       type();
       movingBackgroundImage();
