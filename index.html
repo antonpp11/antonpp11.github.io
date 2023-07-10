@@ -66,15 +66,15 @@
     };
     xhrNavbar.send();
 
-    var footerContainer = document.getElementById("footer-container");
-    var xhrFooter = new XMLHttpRequest();
-    xhrFooter.open("GET", "footer.html", true);
-    xhrFooter.onreadystatechange = function () {
-      if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
-        footerContainer.innerHTML = xhrFooter.responseText;
-      }
-    };
-    xhrFooter.send();
+    // var footerContainer = document.getElementById("footer-container");
+    // var xhrFooter = new XMLHttpRequest();
+    // xhrFooter.open("GET", "footer.html", true);
+    // xhrFooter.onreadystatechange = function () {
+    //   if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
+    //     footerContainer.innerHTML = xhrFooter.responseText;
+    //   }
+    // };
+    // xhrFooter.send();
 
     document.addEventListener("DOMContentLoaded", function (event) {
       navActivePage();
