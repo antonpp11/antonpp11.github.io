@@ -75,22 +75,6 @@
   <div id="footer-container"></div>
 
   <script>
-    // Counter section
-    var carouselPageCounter = document.getElementById("carousel-page-counter");
-    var carousel = document.getElementById("myCarousel");
-
-    carousel.addEventListener("slid.bs.carousel", function () {
-      var activeIndex = Array.from(carousel.querySelectorAll(".item")).indexOf(
-        carousel.querySelector(".item.active")
-      );
-      var pageCount = Math.ceil(carouselItemsContainer.children.length / 6);
-      carouselPageCounter.textContent = "Page " + (activeIndex + 1) + " of " + pageCount;
-    });
-
-    carousel.addEventListener("slide.bs.carousel", function () {
-      carouselPageCounter.textContent = ""; // Clear the counter during the slide transition
-    });
-
     // carousel generator
     var carouselItemsContainer = document.getElementById("carousel-items-container");
     var xhrProjects = new XMLHttpRequest();
@@ -124,6 +108,22 @@
       }
     };
     xhrProjects.send();
+
+    // Counter section
+    var carouselPageCounter = document.getElementById("carousel-page-counter");
+    var carousel = document.getElementById("myCarousel");
+
+    carousel.addEventListener("slid.bs.carousel", function () {
+      var activeIndex = Array.from(carousel.querySelectorAll(".item")).indexOf(
+        carousel.querySelector(".item.active")
+      );
+      var pageCount = Math.ceil(carouselItemsContainer.children.length / 6);
+      carouselPageCounter.textContent = "Page " + (activeIndex + 1) + " of " + pageCount;
+    });
+
+    carousel.addEventListener("slide.bs.carousel", function () {
+      carouselPageCounter.textContent = ""; // Clear the counter during the slide transition
+    });
 
     var navbarContainer = document.getElementById("navbar-container");
     var xhrNavbar = new XMLHttpRequest();
