@@ -26,6 +26,11 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+    .carousel-counter {
+      text-align: center;
+      margin-top: 10px;
+    }
   </style>
 
 </head>
@@ -59,6 +64,7 @@
             </div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            <div id="carousel-page-counter" class="carousel-counter"></div>
           </div>
 
         </div>
@@ -69,9 +75,26 @@
   <div id="footer-container"></div>
 
   <script>
+    // Counter section
+    var carouselPageCounter = document.getElementById("carousel-page-counter");
+    var carousel = document.getElementById("myCarousel");
+
+    carousel.addEventListener("slid.bs.carousel", function () {
+      var activeIndex = Array.from(carousel.querySelectorAll(".item")).indexOf(
+        carousel.querySelector(".item.active")
+      );
+      var pageCount = Math.ceil(carouselItemsContainer.children.length / 6);
+      carouselPageCounter.textContent = "Page " + (activeIndex + 1) + " of " + pageCount;
+    });
+
+    carousel.addEventListener("slide.bs.carousel", function () {
+      carouselPageCounter.textContent = ""; // Clear the counter during the slide transition
+    });
+
+    // carousel generator
     var carouselItemsContainer = document.getElementById("carousel-items-container");
     var xhrProjects = new XMLHttpRequest();
-    xhrProjects.open("GET", "projects.json", true);
+    xhrProjects.open("GET", "https://antonpp11.github.io/projects.json", true);
     xhrProjects.onreadystatechange = function () {
       if (xhrProjects.readyState === 4 && xhrProjects.status === 200) {
         var projects = JSON.parse(xhrProjects.responseText).projects;
