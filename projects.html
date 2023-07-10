@@ -58,22 +58,16 @@
 
   <script>
     var carouselItemsContainer = document.getElementById("carousel-items-container");
-
-    // Fetch project data from the JSON file
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "projects.json", true);
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        var projects = JSON.parse(xhr.responseText).projects;
-
-        // Generate carousel items dynamically
+    var xhrProjects = new XMLHttpRequest();
+    xhrProjects.open("GET", "projects.json", true);
+    xhrProjects.onreadystatechange = function () {
+      if (xhrProjects.readyState === 4 && xhrProjects.status === 200) {
+        var projects = JSON.parse(xhrProjects.responseText).projects;
         var carouselItems = '';
         var itemCounter = 0;
-
         for (var i = 0; i < projects.length; i += 6) {
           var isActive = itemCounter === 0 ? 'active' : '';
           carouselItems += '<div class="item ' + isActive + '">';
-
           for (var j = i; j < i + 6 && j < projects.length; j++) {
             var project = projects[j];
             carouselItems += `
@@ -88,11 +82,9 @@
               </div>
             `;
           }
-
           carouselItems += '</div>';
           itemCounter++;
         }
-
         carouselItemsContainer.innerHTML = carouselItems;
       }
     };
