@@ -16,85 +16,80 @@
 
   <title>Service Novigrad</title>
 
-<link href="https://antonpp11.github.io/main.css" rel="stylesheet"></head>
+  <link href="https://antonpp11.github.io/main.css" rel="stylesheet">
+</head>
 
 <body class="">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
 
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-default">
+  <header>
+    <div id="navbar-container" style="background-color: white;"></div>
+  </header>
+  <div class="section-container">
     <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="/index.html" title="">Home</a></li>
-          <li><a href="/projects.html" title="">Projects</a></li>
-          <!-- <li><a href="/blog.html" title="">Blog</a></li> -->
-          <li><a href="/about.html" title="">About me</a></li>
-          <li><a href="/contact.html" title="">Contact</a></li>
-        </ul>
-
-
-        <!-- <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-          <li><a href="./sudoku.html" title="" class="active">001</a></li>
-          <li><a href="./tictactoe.html" title="">002</a></li>
-          <li><a href="./thiswebsite.html" title="">003</a></li>
-          <li><a href="./scrollchanger.html" title="">004</a></li>
-          <li><a href="./ottleti.html" title="">005</a></li>
-          <li><a href="/index.html" title="">006</a></li>
-        </ul> -->
-
-
-      </div>
-    </div>
-  </nav>
-</header>
-<div class="section-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <img src="/assets/images/servicenovigrad.jpg" class="img-responsive" alt="">
-        <div class="card-container">
-          <div class="text-center">
-            <h1 class="h2">Service Novigrad</h1>
-          </div>
-          <p>This is an Android app that I built for a school project. I managed to familiarize myself with Android Studio using Java.
+      <div class="row">
+        <div class="col-xs-12">
+          <img src="/assets/images/servicenovigrad.jpg" class="img-responsive" alt="">
+          <div class="card-container">
+            <div class="text-center">
+              <h1 class="h2">Service Novigrad</h1>
+            </div>
+            <p>This is an Android app that I built for a school project. I managed to familiarize myself with Android
+              Studio using Java.
               The app replicates a big organization, like a city or a country and helps by offering services.
-              Clients can login to see what are their available services (driving license, health card, etc.) and apply for one of them.
-              Employees can approve requests, and manage the branch were they work. Finally, administrators have almost all of the rights,
+              Clients can login to see what are their available services (driving license, health card, etc.) and apply
+              for one of them.
+              Employees can approve requests, and manage the branch were they work. Finally, administrators have almost
+              all of the rights,
               and can control pretty much everything there is.
-              <br>Find the source code here: <a href="https://github.com/antonpp11/ServiceNovigrad" target="_blank">https://github.com/antonpp11/ServiceNovigrad</a>
-          </p>
+              <br>Find the source code here: <a href="https://github.com/antonpp11/ServiceNovigrad"
+                target="_blank">https://github.com/antonpp11/ServiceNovigrad</a>
+            </p>
 
-          <!-- <blockquote>
+            <!-- <blockquote>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</p>
             <small class="pull-right">Irina Martin</small>
           </blockquote> -->
+          </div>
         </div>
+
+
       </div>
-
-
     </div>
   </div>
-</div>
 
 
-<div id="footer-container"></div>
+  <div id="footer-container"></div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     navActivePage();
-  });
-</script>
-<script type="text/javascript" src="https://antonpp11.github.io/main.js"></script></body>
+  <script>
+    var navbarContainer = document.getElementById("navbar-container");
+    var xhrNavbar = new XMLHttpRequest();
+    xhrNavbar.open("GET", "navbar.html", true);
+    xhrNavbar.onreadystatechange = function () {
+      if (xhrNavbar.readyState === 4 && xhrNavbar.status === 200) {
+        navbarContainer.innerHTML = xhrNavbar.responseText;
+      }
+    };
+    xhrNavbar.send();
+
+    var footerContainer = document.getElementById("footer-container");
+    var xhrFooter = new XMLHttpRequest();
+    xhrFooter.open("GET", "footer.html", true);
+    xhrFooter.onreadystatechange = function () {
+      if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
+        footerContainer.innerHTML = xhrFooter.responseText;
+      }
+    };
+    xhrFooter.send();
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navActivePage();
+    });
+  </script>
+  <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>
+</body>
 
 </html>
