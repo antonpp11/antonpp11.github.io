@@ -25,7 +25,9 @@
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
 
-  <div id="navbar-container"></div>
+  <header>
+    <div id="navbar-container"></div>
+  </header>
 
   <div class="section-container">
     <div class="container">
@@ -225,7 +227,7 @@
     var footerContainer = document.getElementById("footer-container");
     var xhrFooter = new XMLHttpRequest();
     xhrFooter.open("GET", "footer.html", true);
-    xhrFooter.onreadystatechange = function() {
+    xhrFooter.onreadystatechange = function () {
       if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
         footerContainer.innerHTML = xhrFooter.responseText;
       }
