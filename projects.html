@@ -15,6 +15,27 @@
   <title>Projects</title>
 
   <link href="https://antonpp11.github.io/main.css" rel="stylesheet">
+
+  <style>
+    /* Custom styles for carousel */
+    .projects-carousel .carousel-inner .item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .projects-carousel .carousel-inner .item .col-md-4 {
+      flex-basis: calc(33.33% - 15px);
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .projects-carousel .carousel-inner .item .col-md-4 {
+        flex-basis: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body class="">
@@ -74,7 +95,7 @@
           carouselItems += `
             <div class="item ${isActive}">
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-md-4 col-md-offset-1">
                   <a href="${project.link}" class="black-image-project-hover">
                     <img src="${project.image}" alt="Image" class="img-responsive">
                   </a>
