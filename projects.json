@@ -1,17 +1,17 @@
 {
     "projects": [
       {
-        "title": "Elevator Traffic Mgmt",
+        "title": "Elevator Traffic Mgmt A",
         "image": "/assets/images/neurons.jpg",
         "link": "/projects/project1.html"
       },
       {
-        "title": "Project 2",
+        "title": "Elevator Traffic Mgmt B",
         "image": "/assets/images/neurons.jpg",
         "link": "/projects/project2.html"
       },
       {
-        "title": "Project 3",
+        "title": "Elevator Traffic Mgmt C",
         "image": "/assets/images/neurons.jpg",
         "link": "/projects/project3.html"
       },
