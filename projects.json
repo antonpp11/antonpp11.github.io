@@ -14,6 +14,36 @@
         "title": "Project 3",
         "image": "/assets/images/neurons.jpg",
         "link": "/projects/project3.html"
+      },
+      {
+        "title": "Project 4",
+        "image": "/assets/images/neurons.jpg",
+        "link": "/projects/project1.html"
+      },
+      {
+        "title": "Project 5",
+        "image": "/assets/images/neurons.jpg",
+        "link": "/projects/project2.html"
+      },
+      {
+        "title": "Project 6",
+        "image": "/assets/images/neurons.jpg",
+        "link": "/projects/project3.html"
+      },
+      {
+        "title": "Project 7",
+        "image": "/assets/images/neurons.jpg",
+        "link": "/projects/project1.html"
+      },
+      {
+        "title": "Project 8",
+        "image": "/assets/images/neurons.jpg",
+        "link": "/projects/project2.html"
+      },
+      {
+        "title": "Project 9",
+        "image": "/assets/images/neurons.jpg",
+        "link": "/projects/project3.html"
       }
     ]
   }
