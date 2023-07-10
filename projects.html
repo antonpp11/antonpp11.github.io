@@ -109,23 +109,6 @@
     };
     xhrProjects.send();
 
-    // Counter section
-    // var carouselPageCounter = document.getElementById("carousel-page-counter");
-    // var carousel = document.getElementById("myCarousel");
-
-    // carousel.addEventListener("slid.bs.carousel", function () {
-    //   var activeIndex = Array.from(carousel.querySelectorAll(".item")).indexOf(
-    //     carousel.querySelector(".item.active")
-    //   );
-    //   var pageCount = Math.ceil(carousel.querySelectorAll(".item").length);
-    //   carouselPageCounter.textContent = "Page " + (activeIndex + 1) + " of " + pageCount;
-    // });
-
-    // document.addEventListener("DOMContentLoaded", function () {
-    //   var initialPageCount = Math.ceil(carousel.querySelectorAll(".item").length);
-    //   carouselPageCounter.textContent = initialPageCount > 0 ? "Page 1 of " + initialPageCount : "";
-    // });
-
     // Navbar and footer section
 
     var navbarContainer = document.getElementById("navbar-container");
@@ -154,10 +137,10 @@
   </script>
   <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>
   <script>
-    // Counter script
+    // Counter section
     var carouselPageCounter = document.getElementById("carousel-page-counter");
     var carousel = document.getElementById("myCarousel");
-  
+
     carousel.addEventListener("slid.bs.carousel", function () {
       var activeIndex = Array.from(carousel.querySelectorAll(".item")).indexOf(
         carousel.querySelector(".item.active")
@@ -165,7 +148,7 @@
       var pageCount = Math.ceil(carousel.querySelectorAll(".item").length);
       carouselPageCounter.textContent = "Page " + (activeIndex + 1) + " of " + pageCount;
     });
-  
+
     document.addEventListener("DOMContentLoaded", function () {
       var initialPageCount = Math.ceil(carousel.querySelectorAll(".item").length);
       carouselPageCounter.textContent = initialPageCount > 0 ? "Page 1 of " + initialPageCount : "";
