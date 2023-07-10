@@ -30,6 +30,7 @@
     .carousel-counter {
       text-align: center;
       margin-top: 10px;
+      font-weight: bold;
     }
   </style>
 
@@ -121,9 +122,12 @@
       carouselPageCounter.textContent = "Page " + (activeIndex + 1) + " of " + pageCount;
     });
 
-    carousel.addEventListener("slide.bs.carousel", function () {
-      carouselPageCounter.textContent = ""; // Clear the counter during the slide transition
+    document.addEventListener("DOMContentLoaded", function () {
+      carouselPageCounter.textContent = "Page 1 of " + Math.ceil(carouselItemsContainer.children.length / 6);
     });
+
+
+    // Navbar and footer section
 
     var navbarContainer = document.getElementById("navbar-container");
     var xhrNavbar = new XMLHttpRequest();
