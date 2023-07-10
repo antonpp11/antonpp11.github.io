@@ -16,26 +16,6 @@
 
   <link href="https://antonpp11.github.io/main.css" rel="stylesheet">
 
-  <!-- <style>
-    /* Custom styles for carousel */
-    .projects-carousel .carousel-inner .item {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .projects-carousel .carousel-inner .item .col-md-4 {
-      flex-basis: calc(33.33% - 15px);
-      margin-bottom: 30px;
-    }
-
-    @media (max-width: 768px) {
-      .projects-carousel .carousel-inner .item .col-md-4 {
-        flex-basis: 100%;
-      }
-    }
-  </style> -->
 </head>
 
 <body class="">
@@ -86,30 +66,33 @@
       if (xhr.readyState === 4 && xhr.status === 200) {
         var projects = JSON.parse(xhr.responseText).projects;
 
-        // Generate carousel items
-        var carouselItems = "";
-        for (var i = 0; i < projects.length; i++) {
-          var project = projects[i];
-          var isActive = i === 0 ? "active" : "";
+        // Generate carousel items dynamically
+        var carouselItems = '';
+        var itemCounter = 0;
 
-          carouselItems += `
-            <div class="item ${isActive}">
-              <div class="row">
-                <div class="col-md-4 col-md-offset-1">
-                  <a href="${project.link}" class="black-image-project-hover">
-                    <img src="${project.image}" alt="Image" class="img-responsive">
-                  </a>
-                  <div class="card-container">
-                    <h3>${project.title}</h3>
-                    <a href="${project.link}" class="btn btn-default">Discover</a>
-                  </div>
+        for (var i = 0; i < projects.length; i += 6) {
+          var isActive = itemCounter === 0 ? 'active' : '';
+          carouselItems += '<div class="item ' + isActive + '">';
+
+          for (var j = i; j < i + 6 && j < projects.length; j++) {
+            var project = projects[j];
+            carouselItems += `
+              <div class="col-sm-4">
+                <a href="${project.link}" class="black-image-project-hover">
+                  <img src="${project.image}" alt="Image" class="img-responsive">
+                </a>
+                <div class="card-container">
+                  <h3>${project.title}</h3>
+                  <a href="${project.link}" class="btn btn-default">Discover</a>
                 </div>
               </div>
-            </div>
-          `;
+            `;
+          }
+
+          carouselItems += '</div>';
+          itemCounter++;
         }
 
-        // Append carousel items to the container
         carouselItemsContainer.innerHTML = carouselItems;
       }
     };
