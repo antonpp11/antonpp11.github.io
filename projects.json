@@ -2,17 +2,17 @@
     "projects": [
       {
         "title": "Project 1",
-        "image": "/assets/images/project1.jpg",
+        "image": "/assets/images/neurons.jpg",
         "link": "/projects/project1.html"
       },
       {
         "title": "Project 2",
-        "image": "/assets/images/project2.jpg",
+        "image": "/assets/images/neurons.jpg",
         "link": "/projects/project2.html"
       },
       {
         "title": "Project 3",
-        "image": "/assets/images/project3.jpg",
+        "image": "/assets/images/neurons.jpg",
         "link": "/projects/project3.html"
       }
     ]
