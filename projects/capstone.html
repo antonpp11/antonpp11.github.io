@@ -89,7 +89,7 @@
 
     var footerContainer = document.getElementById("footer-container");
     var xhrFooter = new XMLHttpRequest();
-    xhrFooter.open("GET", "footer.html", true);
+    xhrFooter.open("GET", "https://antonpp11.github.io/footer.html", true);
     xhrFooter.onreadystatechange = function () {
       if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
         footerContainer.innerHTML = xhrFooter.responseText;

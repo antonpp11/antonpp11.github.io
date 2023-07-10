@@ -59,7 +59,7 @@
   <script>
     var navbarContainer = document.getElementById("navbar-container");
     var xhrNavbar = new XMLHttpRequest();
-    xhrNavbar.open("GET", "navbar.html", true);
+    xhrNavbar.open("GET", "https://antonpp11.github.io/navbar.html", true);
     xhrNavbar.onreadystatechange = function () {
       if (xhrNavbar.readyState === 4 && xhrNavbar.status === 200) {
         navbarContainer.innerHTML = xhrNavbar.responseText;
@@ -69,7 +69,7 @@
 
     var footerContainer = document.getElementById("footer-container");
     var xhrFooter = new XMLHttpRequest();
-    xhrFooter.open("GET", "footer.html", true);
+    xhrFooter.open("GET", "https://antonpp11.github.io/footer.html", true);
     xhrFooter.onreadystatechange = function () {
       if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
         footerContainer.innerHTML = xhrFooter.responseText;
