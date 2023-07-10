@@ -123,8 +123,10 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-      carouselPageCounter.textContent = "Page 1 of " + Math.ceil(carouselItemsContainer.children.length / 6);
+      var initialPageCount = Math.ceil(carouselItemsContainer.children.length / 6);
+      carouselPageCounter.textContent = initialPageCount > 0 ? "Page 1 of " + initialPageCount : "";
     });
+
 
 
     // Navbar and footer section
