@@ -89,20 +89,20 @@
         var itemCounter = 0;
         for (var i = 0; i < projects.length; i += 6) {
           var isActive = itemCounter === 0 ? 'active' : '';
-          carouselItems += '<div class="carousel-item ' + isActive + '">';
+          carouselItems += '<div class="item ' + isActive + '">';
           for (var j = i; j < i + 6 && j < projects.length; j++) {
             var project = projects[j];
             carouselItems += `
-              <div class="col-sm-4">
-                <a href="${project.link}" class="black-image-project-hover">
-                  <img src="${project.image}" alt="Image" class="img-responsive">
-                </a>
-                <div class="card-container">
-                  <h3 class="project-title">${project.title}</h3>
-                  <a href="${project.link}" class="btn btn-default">Discover</a>
-                </div>
+            <div class="col-sm-4">
+              <a href="${project.link}" class="black-image-project-hover">
+                <img src="${project.image}" alt="Image" class="img-responsive">
+              </a>
+              <div class="card-container">
+                <h3 class="project-title">${project.title}</h3>
+                <a href="${project.link}" class="btn btn-default">Discover</a>
               </div>
-            `;
+            </div>
+          `;
           }
           carouselItems += '</div>';
           itemCounter++;
@@ -112,22 +112,18 @@
         // Counter section
         var carouselPageCounter = document.getElementById("carousel-page-counter");
         var carousel = document.getElementById("myCarousel");
-        var carouselItems = carousel.querySelectorAll(".carousel-item");
-        var carouselTotalItems = carouselItems.length;
-        var currentItemIndex = 1;
 
-        function updateCarouselCounter() {
-          carouselPageCounter.textContent = "Page " + currentItemIndex + " of " + carouselTotalItems;
-        }
-
-        carousel.addEventListener("slide.bs.carousel", function (event) {
-          var targetIndex = parseInt(event.to) + 1;
-          currentItemIndex = targetIndex;
-          updateCarouselCounter();
+        carousel.addEventListener("slide.bs.carousel", function () {
+          var activeIndex = Array.from(carousel.querySelectorAll(".item")).indexOf(
+            carousel.querySelector(".item.active")
+          );
+          var pageCount = Math.ceil(carousel.querySelectorAll(".item").length);
+          carouselPageCounter.textContent = "Page " + (activeIndex + 1) + " of " + pageCount;
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-          updateCarouselCounter();
+          var initialPageCount = Math.ceil(carousel.querySelectorAll(".item").length);
+          carouselPageCounter.textContent = initialPageCount > 0 ? "Page 1 of " + initialPageCount : "";
         });
       }
     };
