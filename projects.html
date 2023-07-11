@@ -60,7 +60,6 @@
         </div>
 
         <div class="col-md-12">
-
           <div id="myCarousel" class="carousel slide projects-carousel" data-interval="false">
             <div id="carousel-items-container" class="carousel-inner"></div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
@@ -84,8 +83,6 @@
     xhrNavbar.onreadystatechange = function () {
       if (xhrNavbar.readyState === 4 && xhrNavbar.status === 200) {
         navbarContainer.innerHTML = xhrNavbar.responseText;
-
-        // Start loading projects and initialize the carousel counter after loading the navbar
         loadProjectsAndInitializeCarouselCounter();
       }
     };
