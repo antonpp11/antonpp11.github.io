@@ -59,11 +59,20 @@
         <div class="col-md-12">
 
           <div id="myCarousel" class="carousel slide projects-carousel" data-interval="false">
+            <ol class="carousel-indicators">
+              <!-- Indicators will be dynamically generated here -->
+            </ol>
             <div id="carousel-items-container" class="carousel-inner">
               <!-- Dynamically generated carousel items will be inserted here -->
             </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
 
         </div>
@@ -76,34 +85,38 @@
   <script>
     // carousel generator
     var carouselItemsContainer = document.getElementById("carousel-items-container");
+    var carouselIndicatorsContainer = document.querySelector("#myCarousel .carousel-indicators");
     var xhrProjects = new XMLHttpRequest();
     xhrProjects.open("GET", "https://antonpp11.github.io/projects.json", true);
     xhrProjects.onreadystatechange = function () {
       if (xhrProjects.readyState === 4 && xhrProjects.status === 200) {
         var projects = JSON.parse(xhrProjects.responseText).projects;
         var carouselItems = '';
+        var carouselIndicators = '';
         var itemCounter = 0;
         for (var i = 0; i < projects.length; i += 6) {
           var isActive = itemCounter === 0 ? 'active' : '';
-          carouselItems += '<div class="item ' + isActive + '">';
+          carouselItems += '<div class="carousel-item ' + isActive + '">';
+          carouselIndicators += '<li data-target="#myCarousel" data-slide-to="' + itemCounter + '" class="' + isActive + '"></li>';
           for (var j = i; j < i + 6 && j < projects.length; j++) {
             var project = projects[j];
             carouselItems += `
-            <div class="col-sm-4">
-              <a href="${project.link}" class="black-image-project-hover">
-                <img src="${project.image}" alt="Image" class="img-responsive">
-              </a>
-              <div class="card-container">
-                <h3 class="project-title">${project.title}</h3>
-                <a href="${project.link}" class="btn btn-default">Discover</a>
+              <div class="col-sm-4">
+                <a href="${project.link}" class="black-image-project-hover">
+                  <img src="${project.image}" alt="Image" class="img-responsive">
+                </a>
+                <div class="card-container">
+                  <h3 class="project-title">${project.title}</h3>
+                  <a href="${project.link}" class="btn btn-default">Discover</a>
+                </div>
               </div>
-            </div>
-          `;
+            `;
           }
           carouselItems += '</div>';
           itemCounter++;
         }
         carouselItemsContainer.innerHTML = carouselItems;
+        carouselIndicatorsContainer.innerHTML = carouselIndicators;
       }
     };
     xhrProjects.send();
