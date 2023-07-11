@@ -15,7 +15,6 @@
   <title>Projects</title>
 
   <link href="https://antonpp11.github.io/main.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     .carousel-inner .item {
@@ -63,17 +62,8 @@
             <div id="carousel-items-container" class="carousel-inner">
               <!-- Dynamically generated carousel items will be inserted here -->
             </div>
-            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </a>
-            <ol class="carousel-indicators">
-              <!-- Indicators will be dynamically generated here -->
-            </ol>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
           </div>
 
         </div>
@@ -83,42 +73,37 @@
 
   <div id="footer-container"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
   <script>
     // carousel generator
     var carouselItemsContainer = document.getElementById("carousel-items-container");
-    var carouselIndicatorsContainer = document.querySelector("#myCarousel .carousel-indicators");
     var xhrProjects = new XMLHttpRequest();
     xhrProjects.open("GET", "https://antonpp11.github.io/projects.json", true);
     xhrProjects.onreadystatechange = function () {
       if (xhrProjects.readyState === 4 && xhrProjects.status === 200) {
         var projects = JSON.parse(xhrProjects.responseText).projects;
         var carouselItems = '';
-        var carouselIndicators = '';
         var itemCounter = 0;
         for (var i = 0; i < projects.length; i += 6) {
           var isActive = itemCounter === 0 ? 'active' : '';
-          carouselItems += '<div class="carousel-item ' + isActive + '">';
-          carouselIndicators += '<li data-bs-target="#myCarousel" data-bs-slide-to="' + itemCounter + '" class="' + isActive + '"></li>';
+          carouselItems += '<div class="item ' + isActive + '">';
           for (var j = i; j < i + 6 && j < projects.length; j++) {
             var project = projects[j];
             carouselItems += `
-              <div class="col-sm-4">
-                <a href="${project.link}" class="black-image-project-hover">
-                  <img src="${project.image}" alt="Image" class="img-responsive">
-                </a>
-                <div class="card-container">
-                  <h3 class="project-title">${project.title}</h3>
-                  <a href="${project.link}" class="btn btn-default">Discover</a>
-                </div>
+            <div class="col-sm-4">
+              <a href="${project.link}" class="black-image-project-hover">
+                <img src="${project.image}" alt="Image" class="img-responsive">
+              </a>
+              <div class="card-container">
+                <h3 class="project-title">${project.title}</h3>
+                <a href="${project.link}" class="btn btn-default">Discover</a>
               </div>
-            `;
+            </div>
+          `;
           }
           carouselItems += '</div>';
           itemCounter++;
         }
         carouselItemsContainer.innerHTML = carouselItems;
-        carouselIndicatorsContainer.innerHTML = carouselIndicators;
       }
     };
     xhrProjects.send();
@@ -149,6 +134,7 @@
       navActivePage();
     });
   </script>
+  <script type="text/javascript" src="https://antonpp11.github.io/main.js"></script>
 </body>
 
 </html>
