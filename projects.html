@@ -15,6 +15,7 @@
   <title>Projects</title>
 
   <link href="https://antonpp11.github.io/main.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <style>
     .carousel-inner .item {
@@ -62,7 +63,7 @@
             <div id="carousel-items-container" class="carousel-inner"></div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-            <p class="carousel-counter">Page _ of 3</p>
+            <p id="carouselCounter" class="carousel-counter">Page _ of 3</p>
           </div>
         </div>
       </div>
@@ -105,6 +106,23 @@
       }
     };
     xhrProjects.send();
+
+    // carousel counter
+    var carouselCounter = document.getElementById("carouselCounter");
+    var carousel = document.getElementById("myCarousel");
+    var slideCount = carousel.querySelectorAll(".item").length;
+    var currentIndex = 0;
+
+    carousel.addEventListener("slid.bs.carousel", function () {
+      currentIndex = carousel.querySelector(".active").getAttribute("data-slide-to");
+      updateCarouselCounter();
+    });
+
+    function updateCarouselCounter() {
+      var currentPage = parseInt(currentIndex) + 1;
+      carouselCounter.innerHTML = "Page " + currentPage + " of " + slideCount;
+    }
+
 
     // Navbar and footer section
 
