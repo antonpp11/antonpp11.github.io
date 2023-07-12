@@ -73,8 +73,6 @@
 
   <div id="footer-container"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script>
     // Navbar and footer section
     var navbarContainer = document.getElementById("navbar-container");
@@ -129,24 +127,19 @@
             itemCounter++;
           }
           carouselItemsContainer.innerHTML = carouselItems;
-
           // Initialize the carousel counter
           var carouselCounter = document.getElementById("carouselCounter");
           var carousel = $("#myCarousel");
           var slideCount = carousel.find(".item").length;
           var currentIndex = 0;
-
           carousel.on("slide.bs.carousel", function (event) {
             currentIndex = $(event.relatedTarget).index();
             updateCarouselCounter();
           });
-
           function updateCarouselCounter() {
             var currentPage = parseInt(currentIndex) + 1;
-            carouselCounter.textContent = "Page " + currentPage + " of " + slideCount;
+            carouselCounter.textContent = "" + currentPage + " of " + slideCount;
           }
-
-          // Call the updateCarouselCounter() function to set the initial value
           updateCarouselCounter();
         }
       };
