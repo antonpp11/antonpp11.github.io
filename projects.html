@@ -136,7 +136,7 @@
           var slideCount = carousel.querySelectorAll(".item").length;
           var currentIndex = 0;
 
-          carousel.addEventListener("slid", function () {
+          carousel.addEventListener("slide", function () {
             currentIndex = carousel.querySelector(".active").getAttribute("data-slide-to");
             updateCarouselCounter();
           });
