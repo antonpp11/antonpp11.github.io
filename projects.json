@@ -1,6 +1,11 @@
 {
     "projects": [
       {
+        "title": "Coming Soon TEST",
+        "image": "/assets/images/neurons.jpg",
+        "link": "/projects.html"
+      },
+      {
         "title": "Elevator Traffic Mgmt",
         "image": "/assets/images/capstone.jpg",
         "link": "/projects/capstone.html"
