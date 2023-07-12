@@ -1,100 +1,94 @@
 {
-    "projects": [
-      {
-        "title": "Coming Soon TEST",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects.html"
-      },
-      {
-        "title": "Elevator Traffic Mgmt",
-        "image": "/assets/images/capstone.jpg",
-        "link": "/projects/capstone.html"
-      },
-      {
-        "title": "World Cup Predictor",
-        "image": "/assets/images/worldcup.jpg",
-        "link": "/projects/worldcup.html"
-      },
-      {
-        "title": "Fixed Income Maths",
-        "image": "/assets/images/bondsmaths.jpg",
-        "link": "/projects/bondsmaths.html"
-      },
-      {
-        "title": "Stock Valuation",
-        "image": "/assets/images/stockvaluation.jpg",
-        "link": "/projects/stockvaluation.html"
-      },
-      {
-        "title": "Correlation Matrix",
-        "image": "/assets/images/correlationmatrix.gif",
-        "link": "/projects/correlationmatrix.html"
-      },
-      {
-        "title": "Markowitz Model",
-        "image": "/assets/images/markowitz.jpg",
-        "link": "/projects/markowitz.html"
-      },
-      {
-        "title": "Financial Accounting",
-        "image": "/assets/images/financialaccounting.jpg",
-        "link": "/projects/financialaccounting.html"
-      },
-      {
-        "title": "Ottleti App",
-        "image": "/assets/images/ottleti.jpg",
-        "link": "/projects/ottleti.html"
-      },
-      {
-        "title": "Stock Screening",
-        "image": "/assets/images/stockscreening.jpg",
-        "link": "/projects/stockscreening.html"
-      },
-      {
-        "title": "Sudoku Solver",
-        "image": "/assets/images/sudoku.jpg",
-        "link": "/projects/sudoku.html"
-      },
-      {
-        "title": "TicTacToe AI",
-        "image": "/assets/images/tictactoe.jpg",
-        "link": "/projects/tictactoe.html"
-      },
-      {
-        "title": "Scroll Changer",
-        "image": "/assets/images/scrollchanger.jpg",
-        "link": "/projects/scrollchanger.html"
-      },
-      {
-        "title": "Engineering Games",
-        "image": "/assets/images/enggames.jpg",
-        "link": "/projects/enggames.html"
-      },
-      {
-        "title": "Service Novigrad",
-        "image": "/assets/images/servicenovigrad.jpg",
-        "link": "/projects/servicenovigrad.html"
-      },
-      {
-        "title": "This Website",
-        "image": "/assets/images/thiswebsite.jpg",
-        "link": "/projects/thiswebsite.html"
-      },
-      {
-        "title": "PowerBI Training",
-        "image": "/assets/images/powerbi.jpg",
-        "link": "/projects/powerbi.html"
-      },
-      {
-        "title": "Arterial Pump",
-        "image": "/assets/images/pump.jpg",
-        "link": "/projects/pump.html"
-      },
-      {
-        "title": "Coming Soon",
-        "image": "/assets/images/neurons.jpg",
-        "link": "/projects.html"
-      }
-    ]
-  }
-  
+  "projects": [
+    {
+      "title": "Elevator Traffic Mgmt",
+      "image": "/assets/images/capstone.jpg",
+      "link": "/projects/capstone.html"
+    },
+    {
+      "title": "World Cup Predictor",
+      "image": "/assets/images/worldcup.jpg",
+      "link": "/projects/worldcup.html"
+    },
+    {
+      "title": "Fixed Income Maths",
+      "image": "/assets/images/bondsmaths.jpg",
+      "link": "/projects/bondsmaths.html"
+    },
+    {
+      "title": "Stock Valuation",
+      "image": "/assets/images/stockvaluation.jpg",
+      "link": "/projects/stockvaluation.html"
+    },
+    {
+      "title": "Correlation Matrix",
+      "image": "/assets/images/correlationmatrix.gif",
+      "link": "/projects/correlationmatrix.html"
+    },
+    {
+      "title": "Markowitz Model",
+      "image": "/assets/images/markowitz.jpg",
+      "link": "/projects/markowitz.html"
+    },
+    {
+      "title": "Financial Accounting",
+      "image": "/assets/images/financialaccounting.jpg",
+      "link": "/projects/financialaccounting.html"
+    },
+    {
+      "title": "Ottleti App",
+      "image": "/assets/images/ottleti.jpg",
+      "link": "/projects/ottleti.html"
+    },
+    {
+      "title": "Stock Screening",
+      "image": "/assets/images/stockscreening.jpg",
+      "link": "/projects/stockscreening.html"
+    },
+    {
+      "title": "Sudoku Solver",
+      "image": "/assets/images/sudoku.jpg",
+      "link": "/projects/sudoku.html"
+    },
+    {
+      "title": "TicTacToe AI",
+      "image": "/assets/images/tictactoe.jpg",
+      "link": "/projects/tictactoe.html"
+    },
+    {
+      "title": "Scroll Changer",
+      "image": "/assets/images/scrollchanger.jpg",
+      "link": "/projects/scrollchanger.html"
+    },
+    {
+      "title": "Engineering Games",
+      "image": "/assets/images/enggames.jpg",
+      "link": "/projects/enggames.html"
+    },
+    {
+      "title": "Service Novigrad",
+      "image": "/assets/images/servicenovigrad.jpg",
+      "link": "/projects/servicenovigrad.html"
+    },
+    {
+      "title": "This Website",
+      "image": "/assets/images/thiswebsite.jpg",
+      "link": "/projects/thiswebsite.html"
+    },
+    {
+      "title": "PowerBI Training",
+      "image": "/assets/images/powerbi.jpg",
+      "link": "/projects/powerbi.html"
+    },
+    {
+      "title": "Arterial Pump",
+      "image": "/assets/images/pump.jpg",
+      "link": "/projects/pump.html"
+    },
+    {
+      "title": "Coming Soon",
+      "image": "/assets/images/neurons.jpg",
+      "link": "/projects.html"
+    }
+  ]
+}
